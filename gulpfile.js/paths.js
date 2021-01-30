@@ -12,7 +12,7 @@ exports.paths = {
   scripts: {
     src: "./src/js/index.js",
     dist: "./dist/js/",
-    watch: ["./src/blocks/**/*.js", "./src/js/**/*.js"],
+    watch: ["./src/blocks/**/*.js", "./src/js/**/*.js", './src/js/*.js"'],
   },
   images: {
     src: [
