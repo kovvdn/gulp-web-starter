@@ -5,6 +5,9 @@ const { clean } = require("./tasks/clean");
 const { serve } = require("./tasks/serve");
 const { views } = require("./tasks/views");
 const { scripts } = require("./tasks/scripts");
+const { favicons } = require("./tasks/favicons");
+const { images } = require("./tasks/images");
+const { fonts } = require("./tasks/fonts");
 
 const development = gulp.series(
   clean,
@@ -12,11 +15,11 @@ const development = gulp.series(
     views,
     styles,
     scripts,
-    // "images",
+    images,
     // "webp",
     // "sprites",
-    // "fonts",
-    // "favicons",
+    fonts,
+    favicons,
   ]),
   gulp.parallel(serve)
 );
@@ -29,11 +32,11 @@ exports.prod = gulp.series(
     views,
     styles,
     scripts,
-    // "images",
+    images,
     // "webp",
     // "sprites",
-    // "fonts",
-    // "favicons",
+    fonts,
+    favicons,
     // "gzip",
   ])
 );
